@@ -10,7 +10,7 @@ function fetchAllPosts() {
 }
 
 function createPost(dataPost, i) {
-    
+
     const post = document.createElement("div");
     const title = document.createElement("h4");
     const description = document.createElement("p");
@@ -41,29 +41,44 @@ function fillTheFeed(data) {
 
 fetchAllPosts();
 
-$(document).ready(function() {
+$(document).ready(function () {
 
     // Using custom configuration
+
     $("#carousel").carouFredSel({
-        items     : 3,
-        direction : "left",
-        scroll : {
-            items         : 3,
-            easing        : "elastic",
-            duration      : 3,
-            responsive    : true,
-            pauseOnHover  : true
+        items: 3,
+        direction: "left",
+        scroll: {
+            items: 3,
+            easing: "elastic",
+            duration: 3,
+            responsive: true,
+            pauseOnHover: true
         }
     });
-    
+
     let dropdown = document.querySelector('.dropdown')
 
     dropdown.addEventListener('click', (e) => {
-      if (dropdown.classList.contains('closed')) {
-        dropdown.classList.remove('closed')
-      } else {
-        dropdown.classList.add('closed')    
-      }
+        if (dropdown.classList.contains('closed')) {
+            dropdown.classList.remove('closed')
+        } else {
+            dropdown.classList.add('closed')
+        }
     })
+    
+    //fonction de récuperation des données du formulaire au clic du bouton
 
-});
+    let button = document.querySelector("#formButton")
+
+    button.addEventListener("click"), (e) =>{
+
+        if(document.querySelector("#formButton").clicked == true){
+
+            createPost()
+            fillTheFeed()
+
+    }
+    }
+   
+})

@@ -67,18 +67,31 @@ $(document).ready(function () {
         }
     })
     
-    //fonction de récuperation des données du formulaire au clic du bouton
+    // Fonction de récuperation des données du formulaire au clic du bouton
 
-    let button = document.querySelector("#formButton")
+    let formButton = document.querySelector("#formButton")
 
-    button.addEventListener("click"), (e) =>{
+    formButton.addEventListener('click', (e) => {
 
-        if(document.querySelector("#formButton").clicked == true){
+    // Bloquage de la soumission du form par défaut
 
-            createPost()
-            fillTheFeed()
+        e.preventDefault()
+        console.log('clicked !')
 
-    }
-    }
-   
-})
+    // Récupération du contenu des champs title et description
+
+       data = {
+        "title" : document.querySelector("#title").value,
+        "description" : document.querySelector("#description").value,
+        }
+
+        i = 1
+
+        console.log(data)
+        console.log(i)
+
+    // Appele des méthodes de création de post et d'ajout dans le feed
+
+        feed.appendChild(createPost(data, i))
+
+    })})

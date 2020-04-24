@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="../css/style.css" />
+  <title>Gallery JS</title>
+  <meta charset="UTF-8" />
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="../js/jquery.carouFredSel-6.2.1-packed.js" type="text/javascript"></script>
+  <script src="../js/gallery.js"></script>
+</head>
+
+<body>
+  <div id="content">
+    <header class="blue box">HEADER
+      <div>
+        <div class="dropdown closed">
+          <h3 class="icon">Menu <span>∆</span></h3>
+          <ul class="menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="game.html">Game</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    
+    <div>
+      <div id="carousel">
+        <img src="../images/Chihiro.jpg" width="300px" />
+        <img src="../images/Mononoké.jpg" width="300px" />
+        <img src="../images/Totoro.jpg" width="300px" />
+        <img src="../images/Arrietty.jpg" width="300px" />
+        <img src="../images/Laputa.jpg" width="300px" />
+        <img src="../images/Grave.jpg" width="300px" />
+      </div>
+    </div>
+
+    <div>
+      <button id="columnButton" type="submit">Colonne</button>
+      <button id="squareButton" type="submit">Carré</button>
+      <button id="addButton" type="submit">Ajout</button>
+    </div>
+
+    <main class="box pink">
+      <section id="gallery" class="box red">GALLERY
+        <div class="row">
+          <div class="column">
+            <img src="../images/ballon.jpg" alt="ballon">
+          </div>
+          <div class="column">
+            <img src="../images/ballon.jpg" alt="ballon">
+          </div>
+          <div class="column">
+            <img src="../images/ballon.jpg" alt="ballon">
+          </div>
+          <div class="column">
+            <img src="../images/ballon.jpg" alt="ballon">
+          </div>
+          <div class="column">
+            <img src="../images/ballon.jpg" alt="ballon">
+          </div>
+          <div class="column">
+            <img src="../images/ballon.jpg" alt="ballon">
+          </div>
+          <div class="column">
+            <img src="../images/ballon.jpg" alt="ballon">
+          </div>
+          <div class="column">
+            <img src="../images/ballon.jpg" alt="ballon">
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <footer class="brown box">FOOTER
+    <p>© JS Project</p>
+  </footer>
+
+</body>
+
+</html>

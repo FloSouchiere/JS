@@ -108,7 +108,12 @@ aside {
 .column {
   float: left;
   width: 25%;
-  padding: 10px;
+}
+
+.column.full {
+
+width: 100%;
+
 }
 
 img {

@@ -14,7 +14,8 @@ function createPost(dataPost, i) {
     const post = document.createElement("div");
     const title = document.createElement("h4");
     const description = document.createElement("p");
-    post.className = 'post-' + i;
+    post.className = "post";
+    post.id = i++;
     post.style.color = "white";
     post.style.border = "solid 1px black";
     post.style.borderRadius = "10px";
@@ -28,18 +29,19 @@ function createPost(dataPost, i) {
     post.appendChild(description);
 
     return post;
+    
 }
+
+fetchAllPosts();
 
 function fillTheFeed(data) {
     const feed = document.querySelector("#feed");
     data.forEach((post, i) => {
-        if (i < 10) {
+        
             feed.appendChild(createPost(post, i))
-        }
+            
     });
 }
-
-fetchAllPosts();
 
 $(document).ready(function () {
 
@@ -85,13 +87,12 @@ $(document).ready(function () {
         "description" : document.querySelector("#description").value,
         }
 
-        i = 1
+    // Appelle des méthodes de création de post et d'ajout dans le feed
 
-        console.log(data)
-        console.log(i)
+    // Récupère le 1er élément de la liste feed et ajoute le résultat de createPost en 1er
 
-    // Appele des méthodes de création de post et d'ajout dans le feed
+        let item = feed.firstElementChild
 
-        feed.appendChild(createPost(data, i))
+        feed.insertBefore(createPost(data, 0), item)
 
     })})
